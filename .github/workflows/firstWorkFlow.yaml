@@ -10,10 +10,10 @@ jobs:
       - name: first job script
         shell: cmd
         run: echo Hello World! This is the first job.
-
+        
   secondJob: 
     runs-on: self-hosted
-      steps:
+    steps:
         - name: Second job script
           shell: bash
           run: echo Hello World!
