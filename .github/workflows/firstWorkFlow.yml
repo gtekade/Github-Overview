@@ -1,0 +1,33 @@
+name: first workflow
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  firstJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first job script
+        shell: bash
+        run:
+          echo Hello World!
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: greetings
+        id: greetings
+        uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: 'Mona the Octocat'
+      - name: time
+        run: |
+          echo "The time of the greetings was at: ${{ steps.greetings.outputs.time }}"
+        
+  secondJob: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Second job script
+        shell: bash
+        run:
+          echo Hello World!
+          echo This is muilti line script.   
+      
