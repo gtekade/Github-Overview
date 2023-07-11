@@ -9,13 +9,15 @@ jobs:
     steps:
       - name: first job script
         shell: cmd
-        run: echo Hello World! This is the first job
+        run:
+          echo Hello World!
         
   secondJob: 
     runs-on: self-hosted
     steps:
       - name: Second job script
         shell: bash
-        run: echo Hello World!
-             echo This is muilti line script.   
+        run:
+          echo Hello World!
+          echo This is muilti line script.   
       
