@@ -14,8 +14,8 @@ jobs:
   secondJob: 
     runs-on: self-hosted
     steps:
-        - name: Second job script
-          shell: bash
-          run: echo Hello World!
-               echo This is muilti line script.   
+      - name: Second job script
+        shell: bash
+        run: echo Hello World!
+             echo This is muilti line script.   
       
